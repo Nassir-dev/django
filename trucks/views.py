@@ -9,3 +9,6 @@ def indexview(request):
 
 def homepage(request):
     return HttpResponse("this now home")
+
+def aboutpage(request):
+    return HttpResponse("this is the about page call me now")
