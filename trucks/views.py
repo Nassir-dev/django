@@ -12,3 +12,6 @@ def homepage(request):
 
 def aboutpage(request):
     return HttpResponse("this is the about page call me now")
+
+def contact(request):
+    return HttpResponse("This is a contact page")
