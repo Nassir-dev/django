@@ -1,7 +1,7 @@
-from django import ModelForms
+from django import forms
 from .models import Trucks
 
-class NewTruckForm(froms.ModelForms):
+class NewTruckForm(forms.ModelForm):
     class Meta:
         model: Trucks
         fields: ['entry_no','truck_no','conatiner','client']
