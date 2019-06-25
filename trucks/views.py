@@ -1,15 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.http import HttpResponseRedirect
-from django.urls import reverse
-from . import models
-from .forms import NewTruckForm
+
+
+
+
 
 # Create your views here.
 
 
 def indexview(request):
-    return HttpResponse("Hello this is the Index page")
+    return render(request,'trucks/index.html')
 
 def homepage(request):
     return HttpResponse("Home page")
@@ -23,17 +23,6 @@ def contactme(request):
 def accounts(request):
     return HttpResponse("This will be the accounts page")
 
-def newtruck(request):
-    if request.method!='POST':
-        #create a blank 
-        form = NewTruckForm()
-        
-    else:
-            #submit to form
-            form = NewTruckForm(request.POST)
-            if form.is_valid:
-                form.save()
-                return HttpResponseRedirect(reverse('trucks:Trucks'))
 
                 
             
