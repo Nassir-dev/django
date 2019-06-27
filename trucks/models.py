@@ -11,13 +11,17 @@ class Client(models.Model):
 
 class Trucks(models.Model):
     '''Class to capture all trucks'''
-    entry_no = models.CharField(max_length=50)
+    date = models.CharFied(max_length=8)
     truck_no= models.CharField(max_length=50)
-    container = models.CharField(max_length=50)
+    container = models.CharField(max_length=7)
+    exporter = models.CharField(max_length=50, default='cleared')
+    description = models.CharField(max_length=50 , default='cleared')
+    entry_no = models.CharField(max_length=50)
     client = models.ForeignKey(Client,on_delete='CASCADE')
     
+    
     def __str__(self):
-        return self.container
+        return self.truck_no
     
         
         
