@@ -21,11 +21,9 @@ urlpatterns = [
     path('', include('trucks.urls')),
     path('home/', include('trucks.urls')),
     path('about/', include('trucks.urls')),
-<<<<<<< HEAD
-    path('contact/',include('trucks.urls'))
-=======
+
     path('contactme/',include('trucks.urls')),
     path('accounts/',include('trucks.urls'))
     
->>>>>>> 35b482bb002a393002b6fbcbcd9352e85afbb7d9
+
 ]

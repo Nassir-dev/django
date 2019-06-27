@@ -17,10 +17,7 @@ def homepage(request):
 def aboutpage(request):
     return HttpResponse("this is the about page call me now")
 
-<<<<<<< HEAD
-def contact(request):
-    return HttpResponse("This is a contact page")
-=======
+
 def contactme(request):
     return HttpResponse("This is the contact us page")
 
@@ -31,5 +28,4 @@ def accounts(request):
                 
             
         
-    
->>>>>>> 35b482bb002a393002b6fbcbcd9352e85afbb7d9
+
