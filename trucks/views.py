@@ -27,8 +27,3 @@ def accounts(request):
                 
             
         
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> newbranch
