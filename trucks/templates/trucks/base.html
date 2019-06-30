@@ -1,4 +1,12 @@
-<p>
-    <a href="{% url  'trucks:home'  %}">Home</a> 
+<header>
+        <a href="{% url  'start'  %}">Home</a> 
+        <a href="{% url 'about' %}">About</a>
+        <a href ="{% url 'contactus' %}">contact us</a>
+        <a href="{% url 'accounts' %}">accounts</a>
+</header>
 
-</p>
+{%block content%}
+{%endblock content%}
+
+   
+

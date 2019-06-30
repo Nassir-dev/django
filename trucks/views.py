@@ -9,20 +9,20 @@ from django.http import HttpResponse
 
 
 def indexview(request):
-    return render(request,'trucks/index.html')
+    return render(request,'trucks/begin.html')
 
 def homepage(request):
-    return HttpResponse("Home page")
+    return render(request, 'trucks/index.html')
 
 def aboutpage(request):
-    return HttpResponse("this is the about page call me now")
+    return render(request, 'trucks/about.html')
 
 
 def contactme(request):
-    return HttpResponse("This is the contact us page")
+    return render(request, 'trucks/contact.html')
 
 def accounts(request):
-    return HttpResponse("This will be the accounts page")
+    return render(request, 'trucks/accounts.html')
 
 
                 
