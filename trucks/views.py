@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import *
 
 
 
@@ -12,7 +13,9 @@ def indexview(request):
     return render(request,'trucks/begin.html')
 
 def homepage(request):
-    return render(request, 'trucks/index.html')
+    trucks = Trucks.objects.order_by('truck_no')
+    context = {'trucks':trucks}
+    return render(request, 'trucks/index.html',context)
 
 def aboutpage(request):
     return render(request, 'trucks/about.html')
