@@ -21,7 +21,9 @@ def aboutpage(request):
     return render(request, 'trucks/about.html')
 
 def contactme(request):
-    return render(request, 'trucks/contact.html')
+    clients = Client.objects.order_by('name')
+    context = {'clients':clients}
+    return render(request, 'trucks/contact.html',context)
 
 def accounts(request):
     return render(request, 'trucks/accounts.html')
