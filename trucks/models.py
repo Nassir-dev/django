@@ -13,7 +13,7 @@ class Trucks(models.Model):
     '''Class to capture all trucks'''
     
     truck_no= models.CharField(max_length=50)
-    container = models.CharField(max_length=7)
+    container = models.CharField(max_length=11)
     exporter = models.CharField(max_length=50, default='cleared')
     description = models.CharField(max_length=50 , default='cleared')
     entry_no = models.CharField(max_length=50)
