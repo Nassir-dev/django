@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import *
 
 
 
@@ -12,14 +13,17 @@ def indexview(request):
     return render(request,'trucks/begin.html')
 
 def homepage(request):
-    return render(request, 'trucks/index.html')
+    trucks = Trucks.objects.order_by('truck_no')
+    context = {'trucks':trucks}
+    return render(request, 'trucks/index.html',context)
 
 def aboutpage(request):
     return render(request, 'trucks/about.html')
 
-
 def contactme(request):
-    return render(request, 'trucks/contact.html')
+    clients = Client.objects.order_by('name')
+    context = {'clients':clients}
+    return render(request, 'trucks/contact.html',context)
 
 def accounts(request):
     return render(request, 'trucks/accounts.html')
@@ -28,5 +32,3 @@ def accounts(request):
                 
             
         
-    
-

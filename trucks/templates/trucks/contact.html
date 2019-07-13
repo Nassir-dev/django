@@ -2,8 +2,23 @@
 
 {%block content%}
 
-    <h1>CONTACT</h1>
-    
+    <h1>CLIENTS</h1>
+    <ol>
+            {% for client in clients %}
+            <li>
+                    {{client}}
+                    {%empty%}
+                    <p>No clients registered</p>
+                    {% endfor %}
+
+            </li>
+          
+            
+
+
+
+    </ol>
+   
 
 
 {%endblock content%}

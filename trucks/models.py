@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import *
 
 
 class Client(models.Model):
@@ -11,13 +12,14 @@ class Client(models.Model):
 
 class Trucks(models.Model):
     '''Class to capture all trucks'''
-    
+    date_handled=models.DateField(blank=True,null=True )
     truck_no= models.CharField(max_length=50)
-    container = models.CharField(max_length=7)
-    exporter = models.CharField(max_length=50, default='cleared')
-    description = models.CharField(max_length=50 , default='cleared')
+    container = models.CharField(max_length=11)
+    exporter = models.CharField(max_length=50, null=True)
+    description = models.CharField(max_length=50 , null=True)
     entry_no = models.CharField(max_length=50)
     client = models.ForeignKey(Client,on_delete='CASCADE')
+    
     
     
     def __str__(self):

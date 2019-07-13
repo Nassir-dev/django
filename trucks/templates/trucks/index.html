@@ -3,7 +3,21 @@
 
 {%block content%}
 
-    <h1>INDEX</h1>
+    <h1>ALL TRUCKS</h1>
+
+    <ol>
+        {% for truck in trucks %}
+            <li>
+                {{truck}}
+            </li>
+
+            {% empty %}
+                <li>No Trucks recorded</li>
+
+        {% endfor %}
+
+
+    </ol>
     
 
 
