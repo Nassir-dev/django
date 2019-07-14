@@ -40,7 +40,7 @@ def newclient(request):
             form = ClientForm(request.POST)
             if form.is_valid():
                 form.save()
-                return HttpResponseRedirect(reverse('trucks:Client'))
+                
             
     context = {'form':form}
     return render(request,'trucks/newclient.html',context)

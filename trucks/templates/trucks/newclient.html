@@ -2,8 +2,9 @@
 
 {% block content %}
 <p>Add a New Topic</p>
-<form action="{% 'newclient' %}" method="POST">
-    {% csrf_Token %}
+<form method="POST">
+        {% csrf_token %}
+    
     {{form.as_p}}
 
     <button name='submit'>Add Client</button>
