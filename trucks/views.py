@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
+from django.urls import reverse
 from .models import *
+from .forms import *
 
 
 
@@ -27,6 +29,21 @@ def contactme(request):
 
 def accounts(request):
     return render(request, 'trucks/accounts.html')
+
+def newclient(request):
+    #add a new topic
+    if request.method != 'POST':
+        #create a blank form
+        form = ClientForm()
+        
+    else:
+            form = ClientForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return HttpResponseRedirect(reverse('trucks:Client'))
+            
+    context = {'form':form}
+    return render(request,'trucks/newclient.html',context)
 
 
                 

@@ -1,0 +1,13 @@
+{% extends "trucks/base.html" %}
+
+{% block content %}
+<p>Add a New Topic</p>
+<form action="{% 'newclient' %}" method="POST">
+    {% csrf_Token %}
+    {{form.as_p}}
+
+    <button name='submit'>Add Client</button>
+
+
+</form>
+{% endblock content %}
