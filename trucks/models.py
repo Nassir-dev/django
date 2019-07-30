@@ -38,6 +38,7 @@ class create_invoice(models.Model):
 
 class payment(models.Model):
     date_created = models.DateField(blank=True, null=True)
+    
     invoice_paid = models.ForeignKey(create_invoice, on_delete='CASCADE')
     amount_paid = models.CharField(max_length=50)
     

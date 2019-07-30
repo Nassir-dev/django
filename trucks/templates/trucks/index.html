@@ -18,6 +18,14 @@
 
 
     </ol>
+
+    <hr>
+
+    {% for truck in trucks %}
+    <h3>{{ truck.truck_no }}</h3>
+    <p>Container : {{truck.container}}</p>
+    <p>Exporter:{{truck.exporter}}</p>
+    {% endfor %}
     
 
 
