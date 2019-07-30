@@ -24,7 +24,9 @@ urlpatterns = [
 
     path('contactme/',include('trucks.urls')),
     path('accounts/',include('trucks.urls')),
-    path('newclient/',include('trucks.urls'))
+    path('newclient/',include('trucks.urls')),
+    path('newinvoice/',include('trucks.urls')),
+    path('newpayment/',include('trucks.urls'))
     
 
 ]
