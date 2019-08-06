@@ -1,0 +1,21 @@
+{% block content %}
+
+<div>
+    <form>
+        {% csrf_token %}
+
+        <fieldset>
+            <legend>SIGN UP</legend>
+            {{form}}
+        </fieldset>
+
+        <button type="submit">SIGN UP</button>
+
+    </form>
+</div>
+
+
+
+
+
+{% endblock content %}
