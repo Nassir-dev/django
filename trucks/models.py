@@ -17,7 +17,7 @@ class Trucks(models.Model):
     container = models.CharField(max_length=11)
     exporter = models.CharField(max_length=50, null=True)
     description = models.CharField(max_length=50 , null=True)
-    entry_no = models.CharField(max_length=50)
+    entry_no = models.CharField(max_length=50, primary_key=True)
     client = models.ForeignKey(Client,on_delete='CASCADE')
     
     
@@ -27,7 +27,7 @@ class Trucks(models.Model):
 
 class create_invoice(models.Model):
     date_created = models.DateField(blank=True, null=True)
-    invoice_number = models.CharField(max_length=20)
+    invoice_number = models.CharField(max_length=20,primary_key=True)
     client = models.ForeignKey(Client,on_delete='CASCADE')
     month = models.CharField(max_length=50,blank=True)
     amount = models.CharField(max_length=50)

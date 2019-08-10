@@ -1,0 +1,14 @@
+{% extends "trucks/base.html" %}
+
+{% block content %}
+<p>CREATE INVOICE</p>
+<form method="POST">
+        {% csrf_token %}
+    
+    {{form.as_p}}
+
+    <button name='submit'>CREATE INVOICE</button>
+
+
+</form>
+{% endblock content %}
