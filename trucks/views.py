@@ -15,7 +15,7 @@ def indexview(request):
     return render(request,'trucks/begin.html')
 
 def homepage(request):
-    trucks = Trucks.objects.order_by('truck_no')
+    trucks = Trucks.objects.order_by('date_handled')
     context = {'trucks':trucks}
     return render(request, 'trucks/index.html',context)
 

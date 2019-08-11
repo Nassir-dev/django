@@ -3,29 +3,61 @@
 
 {%block content%}
 
-    <h1>ALL TRUCKS</h1>
+    <h1>TRUCKS PAGES</h1>
 
-    <ol>
-        {% for truck in trucks %}
-            <li>
-                {{truck}}
-            </li>
-
-            {% empty %}
-                <li>No Trucks recorded</li>
-
-        {% endfor %}
+    <p>ADD TRUCKS FORM COMING SOON</p>
 
 
-    </ol>
+
 
     <hr>
 
-    {% for truck in trucks %}
-    <h3>{{ truck.truck_no }}</h3>
-    <p>Container : {{truck.container}}</p>
-    <p>Exporter:{{truck.exporter}}</p>
-    {% endfor %}
+
+
+    <table class="table table-dark   table-stripped  table-bordered">
+
+        <tr>
+            <th>Date</th>
+            <th>Truck</th>
+            <th>Container</th>
+            <th>Exporter</th>
+            <th>Description</th>
+            <th>Entry No.</th>
+            <th>Client</th>
+            <th>Updated By</th>
+
+
+        </tr>
+
+
+
+            {% for truck in trucks %}
+
+            <tr>
+                <td>{{ truck.date_handled }}</td>
+                <td> {{ truck.truck_no }}</td>
+                <td> {{ truck.container }}</td>
+                <td> {{ truck.exporter }}</td>
+                <td> {{ truck.description }}</td>
+                <td> {{ truck.entry_no }}</td>
+                <td> {{ truck.client }}</td>
+                <td> {{ truck.user }}</td>
+            </tr>
+
+    
+
+   
+
+
+            {% endfor %}
+
+
+
+    </table>
+
+   
+
+    
     
 
 
