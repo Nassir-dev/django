@@ -18,7 +18,7 @@ class Trucks(models.Model):
     exporter = models.CharField(max_length=50, null=True)
     description = models.CharField(max_length=50 , null=True)
     entry_no = models.CharField(max_length=50, primary_key=True)
-    user = models.CharField(max_length=20,blank=True,null=True)
+    user = models.CharField(max_length=50,blank=True,null=True)
     client = models.ForeignKey(Client,on_delete='CASCADE')
     
     
