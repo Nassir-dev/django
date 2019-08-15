@@ -1,12 +1,12 @@
 {% block content %}
 
 <div>
-    <form>
+    <form method="POST" action="users/register">
         {% csrf_token %}
 
         <fieldset>
             <legend>SIGN UP</legend>
-            {{form}}
+            {{ form  }}
         </fieldset>
 
         <button type="submit">SIGN UP</button>
