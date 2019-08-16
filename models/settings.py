@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     #'trucks',
     'trucks.apps.TrucksConfig',
     'users.apps.UsersConfig',
-    'accounts_app.AccountsAppConfig',
-    'client_app.ClientAppConfig'
+    'accounts_app.apps.AccountsAppConfig',
+    'client_app.apps.ClientAppConfig'
 ]
 
 MIDDLEWARE = [
