@@ -1,4 +1,5 @@
 from django.db import models
+from client_app.models import Client
 
 # Create your models here.
 
@@ -6,7 +7,7 @@ from django.db import models
 class create_invoice(models.Model):
     date_created = models.DateField(blank=True, null=True)
     invoice_number = models.CharField(max_length=20,primary_key=True)
-    #client = models.ForeignKey(Client,on_delete='CASCADE')
+    client = models.ForeignKey(Client,on_delete='CASCADE', null=True)
     month = models.CharField(max_length=50,blank=True)
     amount = models.CharField(max_length=50)
     created_by = models.CharField(max_length=20)
