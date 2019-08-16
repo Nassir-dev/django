@@ -16,7 +16,8 @@ def indexview(request):
 
 def homepage(request):
     trucks = Trucks.objects.order_by('date_handled')
-    context = {'trucks':trucks}
+    ashiley = Client.objects.filter(name__exact='Ashiley').count()
+    context = {'trucks':trucks, 'ashiley':ashiley}
     return render(request, 'trucks/index.html',context)
 
 def aboutpage(request):
@@ -30,20 +31,7 @@ def contactme(request):
 def accounts(request):
     return render(request, 'trucks/accounts.html')
 
-def newclient(request):
-    #add a new topic
-    if request.method != 'POST':
-        #create a blank form
-        form = ClientForm()
-        
-    else:
-            form = ClientForm(request.POST)
-            if form.is_valid():
-                form.save()
-                
-            
-    context = {'form':form}
-    return render(request,'trucks/newclient.html',context)
+
 
 def invoice(request):
     #create a new message 
