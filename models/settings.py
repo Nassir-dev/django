@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #'trucks',
     'trucks.apps.TrucksConfig',
-    'users.apps.UsersConfig'
+    'users.apps.UsersConfig',
+    'accounts_app.AccountsAppConfig',
+    'client_app.ClientAppConfig'
 ]
 
 MIDDLEWARE = [
