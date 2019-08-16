@@ -1,5 +1,5 @@
 from django.db import models
-from datetime import *
+from datetime import date
 
 
     
